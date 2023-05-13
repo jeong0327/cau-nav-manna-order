@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Summary</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+	<h1>Order Summary</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Location</th>
+				<th>People</th>
+				<th>Name</th>
+				<th>Price</th>
+				<th>Attachment</th>
+			</tr>
+		</thead>
+		<tbody id="order-data"></tbody>
+	</table>
+
+	<!-- Include any necessary scripts, such as jQuery -->
+	<script>
+		// Get form data from previous page
+		const urlParams = new URLSearchParams(window.location.search);
+		const location = urlParams.get('location');
+		const people = urlParams.get('people');
+		const name = urlParams.get('name');
+		const price = urlParams.get('price');
+		const attachment = urlParams.get('attachment');
+
+		// Display form data in table
+		const orderData = document.getElementById('order-data');
+		const newRow = orderData.insertRow();
+		const locationCell = newRow.insertCell();
+		locationCell.innerHTML = location;
+		const peopleCell = newRow.insertCell();
+		peopleCell.innerHTML = people;
+		const nameCell = newRow.insertCell();
+		nameCell.innerHTML = name;
+		const priceCell = newRow.insertCell();
+		priceCell.innerHTML = price;
+		const attachmentCell = newRow.insertCell();
+		attachmentCell.innerHTML = attachment ? attachment : '-';
+	</script>
+</body>
+</html>

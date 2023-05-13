@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Food Ordering</title>
+	<link rel="stylesheet" type="text/css" href="style2.css">
+</head>
+<body>
+	<div class="header">
+		<img src="https://yt3.googleusercontent.com/ytc/AGIKgqMCHMavhl-VPZtq6g-tZiQFwKhu5KlpNozY7VfFDQ=s900-c-k-c0x00ffffff-no-rj" alt="네비게이토 로고" class="logo">
+		<h1>만나 신청</h1>
+		<p class="description">오늘의 메뉴: 설렁탕</p>
+	</div>
+	<div class="form-container">
+		<form id="food-order-form" action="newpage.html" method="post">
+			<div class="question">
+				<label for="location">장소</label>
+				<input type="text" id="location" name="location" required>
+			</div>
+			<div class="question">
+				<label for="people">인원수</label>
+				<input type="number" id="people" name="people" required>
+			</div>
+			<div class="question">
+				<label for="name">이름</label>
+				<input type="text" id="name" name="name" required>
+			</div>
+			<div class="question">
+				<label for="price">가격</label>
+				<input type="number" id="price" name="price" required>
+			</div>
+			<div class="question">
+				<label for="attachment">송금/계좌이체 캡처</label>
+				<input type="file" id="attachment" name="attachment">
+			</div>
+			<div class="submit-button">
+				<input type="submit" value="Submit">
+			</div>
+		</form>
+	</div>
+</body>
+</html>
